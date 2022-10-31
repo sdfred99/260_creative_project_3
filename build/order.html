@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Kicks Addicts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top:60px;
+            font-family:Calibri !important;
+        }
+    </style>
+  </head>
+  <body>
+      <div id="mydiv"></div>
+      
+      <script type="text/babel">
+        const root = ReactDOM.createRoot(
+            document.getElementById('mydiv')
+        );
+        const element = <div>
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <span class="navbar-brand mb- 0 h2">Kicks Addicts</span>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link active">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="gallery.html" class="nav-link active">
+                            Gallery
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="order.html" class="nav-link active">
+                            Order
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="review.html" class="nav-link active">
+                            Reviews
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="p-5 my-4 bg-warning rounded-3">
+            <h1>Place an Order</h1>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="inputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="inputFirstName1">First Name</label>
+            <input type="firstName" class="form-control" id="exampleFirstName1" placeholder="First Name"></input>
+          </div>
+          <div class="form-group">
+            <label for="inputLastName1">Last Name</label>
+            <input type="lastName" class="form-control" id="exampleLastName1" placeholder="Last Name"></input>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress1">Mailing Address</label>
+            <input type="address" class="form-control" id="exampleAddress1" placeholder="Address"></input>
+          </div>
+          <div class="form-group">
+            <label for="inputDescription1">Describe the design you want</label>
+            <input type="description" class="form-control" id="exampleDescription1" placeholder="Description"></input>
+          </div>
+          <div class="form-group">
+            <label for="inputSize1">Enter your shoe size</label>
+            <input type="size" class="form-control" id="exampleSize1" placeholder="Size"></input>
+          </div>
+          <div class="form-group">
+            <label for="inputPairs1">How many pairs do you want?</label>
+            <input type="size" class="form-control" id="examplePair1" placeholder="Number of Pairs"></input>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="estimate" class="btn btn-primary" onClick={calculatePrice}>Get a Price Estimate</button>
+          <div class="form-group" id="priceEstimate"></div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    
+    </div>
+        root.render(element);  
+        
+        function calculatePrice(e) {
+            e.preventDefault();
+            var numPairs = document.getElementById('examplePair1').value
+            let x = document.getElementById('priceEstimate')
+            x.textContent = '$' + numPairs * 20
+            
+         
+         
+        
+        };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Kicks Addicts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top:60px;
+            font-family:Calibri !important;
+        }
+    </style>
+  </head>
+  <body>
+      <div id="mydiv"></div>
+      
+      <script type="text/babel">
+        const root = ReactDOM.createRoot(
+            document.getElementById('mydiv')
+        );
+        const element = <div>
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <span class="navbar-brand mb- 0 h2">Kicks Addicts</span>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link active">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="gallery.html" class="nav-link active">
+                            Gallery
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="order.html" class="nav-link active">
+                            Order
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="review.html" class="nav-link active">
+                            Reviews
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="p-5 my-4 bg-warning rounded-3">
+            <h1>Testimonials</h1>
+            <p class="lead">Totally legit customer reviews</p>
+        </div>
+        <div class="row g-3">
+            <div class="col-md-4 col-lg-2">
+                <h2>Allie says...</h2>
+                <p>They turned out even better than I thought they would! Thank you!</p>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <h2>Bob says...</h2>
+                <p>I love my customized shoes! I wear them every day!</p>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <h2>Greg says...</h2>
+                <p>I want to order 57 more pairs! They are so great!</p>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <h2>Alex says...</h2>
+                <p>Great communication!! Was precise, honest, and perfectly on time with everything!</p>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <h2>Will says...</h2>
+                <p>Kicks Addicts is awesome to work with!! You can tell that they love every bit of what they are working on. When I received my cleats from them you could tell that they were given their fullest effort. I have nothing but good things to say! 10/10 great job</p>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <h2>Alan says...</h2>
+                <p>The custom shoes I got where on point. Very professional about their work. Very fast and affective to your wants. Shows you the design before doing the shoes.</p>
+            </div>
+            
+            
+            
+        </div> 
+    </div>
+    </div>
+        root.render(element);    
+    </script>
+  </body>
+</html>
